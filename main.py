@@ -41,8 +41,8 @@ def run_lucy():
     elif 'time' in command:
         time = datetime.datetime.now().strftime('%I:%M %p')
         talk('Current time is ' + time)
-    elif 'who the heck is' in command:
-        person = command.replace('who the heck is', '')
+    elif 'who is' in command:
+        person = command.replace('who is', '')
         info = wikipedia.summary(person, 1)
         print(info)
         talk(info)
@@ -52,10 +52,20 @@ def run_lucy():
         talk('I am in a relationship with wifi')
     elif 'who created you' in command:
         talk('master uday duhoon created me')
+    elif 'good morning' in command:
+        talk('good morning master')
+    elif 'hello' in command:
+        talk('hello sir what would you like me to play?')
+    elif 'who are you' in command:
+        talk('i am lucy created by uday duhoon and i am a dog i lived for 12 years')
+    elif 'sup' in command:
+        talk('sup whats going on wanna play something')    
+    elif 'who do you serve' in command:
+        talk('i serve master uday mistress urvee duhoon and master nirbahy and i listen mostly to these three but also listen sometimes to mistress prakshi')    
     elif 'joke' in command:
         talk(pyjokes.get_joke())
     else:
-        talk('Please say the command again.')
+        talk('sorry master i did not get that would you kindly repeat it')
 
 
 while True:
